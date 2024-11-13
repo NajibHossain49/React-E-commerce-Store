@@ -1,36 +1,36 @@
 [
     {
       "id": 101,
-      "name": "Wireless Bluetooth Headphones",
+      "name": "Hoco W37 ANC Wireless Bluetooth Headphone",
       "category": "Electronics",
       "price": 79.99,
-      "brand": "SoundMax",
+      "brand": "Hoco",
       "stock": 150,
       "description": "High-quality wireless Bluetooth headphones with noise cancellation and 30-hour battery life.",
       "rating": 4.5,
-      "image_url": "https://hoco.com.bd/wp-content/uploads/2024/05/5-14.webp"
+      "image_url": "https://gadgetnmusic.com/wp-content/uploads/2023/07/Untitled-design-2023-07-14T145710.640.jpg"
     },
     {
       "id": 102,
-      "name": "Smartwatch Series 5",
+      "name": "Apple Watch (Series 5) 44mm - GPS - Aluminum",
       "category": "Electronics",
       "price": 199.99,
-      "brand": "FitTech",
+      "brand": "Apple",
       "stock": 80,
       "description": "A sleek smartwatch with heart rate monitor, GPS, and a built-in fitness tracker.",
       "rating": 4.7,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://regen.pk/cdn/shop/products/IMG_2350.png?v=1674906487"
     },
     {
       "id": 103,
-      "name": "Portable Power Bank 10,000mAh",
+      "name": "Baseus Power Bank 10000mAh Adaman Metal Digital Display 22.5W",
       "category": "Accessories",
       "price": 25.99,
-      "brand": "PowerPlus",
+      "brand": "Baseus",
       "stock": 200,
       "description": "Compact portable power bank with fast-charging capability and LED indicators.",
       "rating": 4.3,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://www.pchouse.com.bd/image/cache/catalog/Baseus%20PPADM10S%2010000mAh/Baseus%20PPADM10S%2010000mAh%201-600x500h.jpg.webp"
     },
     {
       "id": 104,
@@ -41,29 +41,29 @@
       "stock": 50,
       "description": "Non-slip yoga mat made from eco-friendly materials, perfect for home workouts.",
       "rating": 4.8,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://www.klika.com.au/media/catalog/product/cache/620/90/g/y/gya-tpe-ym-gn-3.jpg"
     },
     {
       "id": 105,
-      "name": "Bluetooth Smart Speaker",
+      "name": "Sprout - Soundwave Pro Bluetooth Speaker",
       "category": "Electronics",
       "price": 59.99,
       "brand": "SoundWave",
       "stock": 120,
       "description": "Portable Bluetooth speaker with rich sound and built-in voice assistant compatibility.",
       "rating": 4.4,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://nationalphones.com.au/cdn/shop/files/SoundwaveProSpeakerSP1961.png?v=1712122958&width=823"
     },
     {
       "id": 106,
-      "name": "Stainless Steel Insulated Tumbler",
+      "name": "Prestige Stainless Steel Thermopro Flask, 350 ml, Silver",
       "category": "Home & Kitchen",
       "price": 19.99,
       "brand": "ThermoPro",
       "stock": 300,
       "description": "Keeps drinks hot or cold for up to 12 hours, made from durable stainless steel.",
       "rating": 4.6,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://m.media-amazon.com/images/I/41roOcLfb7L.jpg"
     },
     {
       "id": 107,
@@ -74,7 +74,7 @@
       "stock": 75,
       "description": "Ultrasonic essential oil diffuser with color-changing LED lights and quiet operation.",
       "rating": 4.7,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://m.media-amazon.com/images/I/81-HhlSWNAL.jpg"
     },
     {
       "id": 108,
@@ -85,7 +85,7 @@
       "stock": 60,
       "description": "Adjustable LED desk lamp with a built-in wireless charging pad and touch control.",
       "rating": 4.2,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://m.media-amazon.com/images/I/41Ih2rJ9+eL._AC_.jpg"
     },
     {
       "id": 109,
@@ -96,17 +96,17 @@
       "stock": 180,
       "description": "Electric wine opener with rechargeable battery and foil cutter for an effortless wine experience.",
       "rating": 4.6,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://image.made-in-china.com/2f0j00pfSkbomlAKur/Battery-Operated-6-in-1-Electric-Wine-Bottle-Opener-Set-with-Storage-Base-Automatic-Cordless-Battery-Bar-Set.webp"
     },
     {
       "id": 110,
-      "name": "4K Ultra HD Streaming Device",
+      "name": "Xiaomi TV Stick 4K Ultra HD Streaming Device",
       "category": "Electronics",
       "price": 99.99,
-      "brand": "StreamPro",
+      "brand": "Xiaomi",
       "stock": 110,
       "description": "Stream your favorite content in stunning 4K resolution with this easy-to-use device.",
       "rating": 4.5,
-      "image_url": "/api/placeholder/400/400"
+      "image_url": "https://gadgetbreeze.com.bd/wp-content/uploads/2022/11/Xiaomi-TV-Stick-4K.webp"
     }
 ]

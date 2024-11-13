@@ -12,6 +12,8 @@ import ForgotPassword from "./components/Auth/ForgotPassword";
 import PrivateRoute from "./routes/Private Route";
 import ProductList from "./components/Product/ProductList";
 import ProductDetail from "./components/Product/ProductDetail";
+import CartProvider from "./components/contexts/CartProvider"; // Import CartProvider
+import Cart from "./components/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
         path: "/login",
         element: <Login />,
       },
@@ -72,7 +78,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <MyAuthContext>
-      <RouterProvider router={router} />
+      <CartProvider>
+        {/* Wrap your app with CartProvider */}
+        <RouterProvider router={router} />
+      </CartProvider>
     </MyAuthContext>
   </React.StrictMode>
 );

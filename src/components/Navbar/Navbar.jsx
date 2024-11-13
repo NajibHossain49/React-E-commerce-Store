@@ -2,8 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/MyAuthContext";
 import { ShoppingCart, User, Menu, X, LogOut } from "lucide-react";
+import { CartContext } from "../contexts/CartProvider";
 
 const Navbar = () => {
+  // Use the context to get the cartItems
+  const { cartItems } = useContext(CartContext);
+
+  // Get the number of items in the cart
+  const itemCount = cartItems.reduce(
+    (total, item) => total + (item.quantity || 1),
+    0
+  );
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logout } = useContext(AuthContext);
 
@@ -29,7 +39,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Only render 'My Orders' if the user is logged in */}
+            {/* Only render 'Home' if the user is logged in */}
             {user && (
               <Link to="/" className="text-gray-600 hover:text-gray-900">
                 Home
@@ -42,13 +52,26 @@ const Navbar = () => {
               </Link>
             )}
 
-            <Link to="/productList" className="relative">
-              Product List
-            </Link>
+            {/* Only render 'Product List' if the user is logged in */}
+            {user && (
+              <Link to="/productList" className="relative">
+                Product List
+              </Link>
+            )}
 
             {/* Cart Icon without Counter */}
-            <Link to="/cart" className="relative">
-              <ShoppingCart className="text-gray-600 hover:text-gray-900" />
+            <Link to="/cart" className="relative group">
+              {/* Increase the size of the cart icon */}
+              <ShoppingCart
+                size={32}
+                className="text-gray-600 group-hover:text-gray-900 transition-colors duration-300 text-4xl"
+              />
+
+              {itemCount > 0 && (
+                <span className="absolute top-0 right-0 bg-red-500 text-white text-sm font-semibold rounded-full w-4 h-4 flex items-center justify-center animate-bounce -translate-x-1/2 translate-y-1/2">
+                  {itemCount}
+                </span>
+              )}
             </Link>
 
             {/* Auth Links */}
@@ -110,13 +133,13 @@ const Navbar = () => {
                   My Orders
                 </Link>
               )}
-              <Link
-                to="/cart"
-                className="text-gray-600 hover:text-gray-900"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <ShoppingCart />
-              </Link>
+
+              {user && (
+                <Link to="/productList" className="relative">
+                  Product List
+                </Link>
+              )}
+
               {user ? (
                 <>
                   {user && (

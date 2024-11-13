@@ -1,21 +1,17 @@
-// ProductDetail.jsx
-import React from "react";
+import React, { useContext } from "react";
 import { useParams, useLoaderData, Link } from "react-router-dom";
 import { Star, ArrowLeft } from "lucide-react";
+import { CartContext } from "../contexts/CartProvider"; // Import CartContext
 
 const ProductDetail = () => {
-  // Access dynamic URL parameter
-  const { productId } = useParams();
+  const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
+  const { productId } = useParams();  // Access dynamic URL parameter
+  const products = useLoaderData();   // Load products data Fetch data by the loader
 
-  // Load products data
-  const products = useLoaderData();
-  // Confirm data loading in console (for troubleshooting)
-  console.log(products); // Remove this in production
+  const product = products?.find((p) => p.id === Number(productId)); // Find the product by matching ID types
 
-  // Find the product by matching ID types
-  const product = products?.find((p) => p.id == Number(productId));
 
-  // Render 'Product Not Found' if no matching product is found
+// Render 'Product Not Found' if no matching product is found
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -41,6 +37,10 @@ const ProductDetail = () => {
     image_url,
   } = product;
 
+  const handleAddToCart = () => {
+    addToCart(product); // Call addToCart with the current product
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Link
@@ -52,7 +52,6 @@ const ProductDetail = () => {
       </Link>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Product Image */}
         <div className="rounded-lg overflow-hidden">
           <img
             src={image_url}
@@ -61,7 +60,6 @@ const ProductDetail = () => {
           />
         </div>
 
-        {/* Product Details */}
         <div>
           <span className="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm mb-4">
             {category}
@@ -85,7 +83,10 @@ const ProductDetail = () => {
 
           {/* Action Buttons */}
           <div className="flex gap-4">
-            <button className="flex-grow py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+            <button
+              onClick={handleAddToCart} // Add onClick handler
+              className="flex-grow py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            >
               Add to Cart
             </button>
             <button className="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
@@ -93,7 +94,6 @@ const ProductDetail = () => {
             </button>
           </div>
 
-          {/* Additional Details */}
           <div className="mt-8 border-t border-gray-200 pt-8">
             <h2 className="font-bold text-xl mb-4">Product Details</h2>
             <ul className="space-y-3">
