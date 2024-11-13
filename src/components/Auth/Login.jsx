@@ -5,17 +5,17 @@ import { auth } from "../firebase/firebase-config";
 import { AuthContext } from "../contexts/MyAuthContext";
 
 const Login = () => {
-  const { login } = useContext(AuthContext); // Access login from Authentication Context
+  const { login,loading } = useContext(AuthContext); // Access login from Authentication Context
 
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // handleLogin handler
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
-    setLoading(true);
+    // setLoading(true);
 
     const email = event.target.email.value;
     const password = event.target.password.value;
@@ -42,7 +42,7 @@ const Login = () => {
         setError(errorMessage);
       })
       .finally(() => {
-        setLoading(false);
+        // setLoading(false);
       });
   }; // handleLogin handler Ends
 

@@ -22,6 +22,7 @@ const Navbar = () => {
 
   //   Handel Log out
   const handelLogOut = () => {
+    console.log("HI");
     logout()
       .then(() => {
         console.log("logged out");
@@ -29,6 +30,8 @@ const Navbar = () => {
       .catch((error) => {
         console.log(error.message);
       });
+
+      
   };
 
   return (

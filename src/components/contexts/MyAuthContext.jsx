@@ -12,28 +12,22 @@ import {
 export const AuthContext = createContext(null);
 
 const MyAuthContext = ({ children }) => {
+  const [loading, setLoading] = useState(true);
+
   // State manager to track if user is logged in or not
   const [user, setUser] = useState(null);
 
-  // Manage user login state via Firebase observer in useEffect
-  useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("Currently Logged User", currentUser);
-      setUser(currentUser);
-    });
-
-    return () => {
-      unSubscribe();
-    };
-  }, []);
+ 
 
   // Create User
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Login User
   const login = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -45,8 +39,30 @@ const MyAuthContext = ({ children }) => {
 
   // Send Password Reset Email
   const resetPassword = (email) => {
+    setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
+
+
+ // Manage user login state via Firebase observer in useEffect
+ useEffect(() => {
+  const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+    console.log("Currently Logged User", currentUser);
+    if(currentUser){
+      setUser(currentUser);
+      setLoading(false);
+    }
+    else{
+      setUser(null);
+      setLoading(false);
+    }
+    
+  });
+
+  return () => {
+    unSubscribe();
+  };
+}, []);
 
   // Simplified auth info
   const authInfo = {
@@ -55,6 +71,8 @@ const MyAuthContext = ({ children }) => {
     login,
     logout,
     resetPassword,
+    loading
+
   };
 
   return (

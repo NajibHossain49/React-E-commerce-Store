@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
   // Access Context
   const { user, loading } = useContext(AuthContext);
-
+console.log(user,loading);
   if (loading) {
     return <span className="loading loading-ball loading-lg"></span>;
   }
@@ -14,11 +14,7 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
   // \end{code}
-  return (
-    <div>
-      <Navigate to="/login"></Navigate>
-    </div>
-  );
+  return <Navigate to="/login"></Navigate>;
 };
 
 export default PrivateRoute;
