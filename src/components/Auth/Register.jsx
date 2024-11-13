@@ -4,16 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/MyAuthContext";
 
 const Register = () => {
-  // Access Context at the top level
-  const { createUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext); // Access createUser from Authentication Context
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // handleRegister handler
   const handleRegister = (event) => {
     event.preventDefault();
-    const username = event.target.username.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
@@ -34,16 +33,16 @@ const Register = () => {
       return;
     };
 
-    // Basic validation
-    if (password !== confirmPassword) {
-      setError("Passwords don't match");
-      return;
-    }
-
     // Validate password complexity
     const passwordValidationError = validatePassword(password);
     if (passwordValidationError) {
       setError(passwordValidationError);
+      return;
+    }
+
+    // Basic validation
+    if (password !== confirmPassword) {
+      setError("Passwords don't match");
       return;
     }
 
@@ -82,7 +81,7 @@ const Register = () => {
         setLoading(false);
         event.target.reset(); // Reset the form after submission
       });
-  };
+  }; // handleRegister handler ENDS
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
@@ -172,9 +171,9 @@ const Register = () => {
             {loading ? "Creating Account..." : "Register"}
           </button>
           <div className="text-sm text-gray-600 text-center">
-          Already have an account? 
+            Already have an account?
             <Link to="/login" className="text-blue-600 hover:text-blue-700">
-                 Login
+              Login
             </Link>
           </div>
         </form>

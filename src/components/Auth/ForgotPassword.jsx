@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../contexts/MyAuthContext"; // Make sure you are importing your context correctly
-
+import { Link } from "react-router-dom";
 const ForgotPassword = () => {
   const { resetPassword } = useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -17,6 +17,7 @@ const ForgotPassword = () => {
     resetPassword(email)
       .then(() => {
         setSuccessMessage("Password reset email sent!");
+
         setEmail(""); // Clear the email field after successful request
       })
       .catch((error) => {
@@ -75,6 +76,16 @@ const ForgotPassword = () => {
             {loading ? "Sending..." : "Send Reset Email"}{" "}
             {/* Loading state text */}
           </button>
+
+          {/* Link to back to Login Page */}
+          <div className="text-sm text-center mt-4">
+            <Link
+              to="/login" // Link to back to Login Page
+              className="text-blue-600 hover:text-blue-700"
+            >
+              I recall my password clearly 😅.
+            </Link>
+          </div>
         </form>
       </div>
     </div>

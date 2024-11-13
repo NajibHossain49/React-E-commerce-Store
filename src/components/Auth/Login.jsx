@@ -5,13 +5,13 @@ import { auth } from "../firebase/firebase-config";
 import { AuthContext } from "../contexts/MyAuthContext";
 
 const Login = () => {
-  // Access Context at the top level
-  const { login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext); // Access login from Authentication Context
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // handleLogin handler
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
@@ -44,13 +44,15 @@ const Login = () => {
       .finally(() => {
         setLoading(false);
       });
-  };
+  }; // handleLogin handler Ends
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
 
+        {/* Form Starts */}
+        {/* Trigger handleLogin handler */}
         <form onSubmit={handleLogin} className="space-y-4">
           {error && (
             <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
@@ -102,7 +104,7 @@ const Login = () => {
 
           <div className="text-sm text-gray-600 text-center">
             Don't have an account?
-            <Link to="/" className="text-blue-600 hover:text-blue-700">
+            <Link to="/register" className="text-blue-600 hover:text-blue-700">
               Register
             </Link>
           </div>

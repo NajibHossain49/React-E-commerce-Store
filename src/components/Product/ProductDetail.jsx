@@ -5,7 +5,7 @@ import { CartContext } from "../contexts/CartProvider"; // Import CartContext
 
 const ProductDetail = () => {
   const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
-  const { productId } = useParams();  // Access dynamic URL parameter
+  const { productId } = useParams();  // Access dynamic URL parameter for path: "/product/:productId"
   const products = useLoaderData();   // Load products data Fetch data by the loader
 
   const product = products?.find((p) => p.id === Number(productId)); // Find the product by matching ID types
@@ -84,7 +84,7 @@ const ProductDetail = () => {
           {/* Action Buttons */}
           <div className="flex gap-4">
             <button
-              onClick={handleAddToCart} // Add onClick handler
+              onClick={handleAddToCart} // Add to Cart onClick handler
               className="flex-grow py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Add to Cart

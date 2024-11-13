@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
       <div className="p-4 flex flex-col gap-3 border-t border-gray-100">
         <div className="flex justify-between items-center">
           <span className="text-lg font-bold">${price.toFixed(2)}</span>
-          {/* Add onClick handler */}
+          {/* Add to Cart onClick handler */}
           <button onClick={handleAddToCart} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
             Add to Cart
           </button>

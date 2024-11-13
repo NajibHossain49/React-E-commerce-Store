@@ -1,16 +1,14 @@
-import React from 'react';
-import { Activity, Users, Globe, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Activity, Users, Globe, ArrowRight } from "lucide-react";
 
 // Custom Card Components
-const Card = ({ children, className = '' }) => (
+const Card = ({ children, className = "" }) => (
   <div className={`rounded-lg border bg-white shadow-sm ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader = ({ children }) => (
-  <div className="p-6">{children}</div>
-);
+const CardHeader = ({ children }) => <div className="p-6">{children}</div>;
 
 const CardTitle = ({ children }) => (
   <h3 className="font-semibold text-lg">{children}</h3>
@@ -20,7 +18,7 @@ const CardDescription = ({ children }) => (
   <p className="text-sm text-gray-500 mt-2">{children}</p>
 );
 
-const CardContent = ({ children, className = '' }) => (
+const CardContent = ({ children, className = "" }) => (
   <div className={`p-6 ${className}`}>{children}</div>
 );
 
@@ -28,19 +26,22 @@ const HomePage = () => {
   const features = [
     {
       title: "Product Analytics",
-      description: "Track key product metrics and performance indicators to drive growth.",
-      icon: <Activity className="h-6 w-6 text-blue-500" />
+      description:
+        "Track key product metrics and performance indicators to drive growth.",
+      icon: <Activity className="h-6 w-6 text-blue-500" />,
     },
     {
       title: "Product Management",
-      description: "Manage your product catalog, updates, and inventory with ease.",
-      icon: <Users className="h-6 w-6 text-green-500" />
+      description:
+        "Manage your product catalog, updates, and inventory with ease.",
+      icon: <Users className="h-6 w-6 text-green-500" />,
     },
     {
       title: "Global Access",
-      description: "Access your product data and updates from anywhere in the world.",
-      icon: <Globe className="h-6 w-6 text-purple-500" />
-    }
+      description:
+        "Access your product data and updates from anywhere in the world.",
+      icon: <Globe className="h-6 w-6 text-purple-500" />,
+    },
   ];
 
   return (
@@ -48,10 +49,10 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
-        Welcome Back! Access Your Dashboard to Get Started
+          Welcome Back! Access Your Dashboard to Get Started
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-        Your all-in-one solution for streamlining product management
+          Your all-in-one solution for streamlining product management
         </p>
       </div>
 
