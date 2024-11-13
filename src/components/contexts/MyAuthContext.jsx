@@ -4,6 +4,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 // Create Authentication Context
@@ -35,11 +37,24 @@ const MyAuthContext = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // Logout user
+
+  const logout = () => {
+    return signOut(auth);
+  };
+
+  // Send Password Reset Email
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   // Simplified auth info
   const authInfo = {
     user,
     createUser,
-    login
+    login,
+    logout,
+    resetPassword,
   };
 
   return (

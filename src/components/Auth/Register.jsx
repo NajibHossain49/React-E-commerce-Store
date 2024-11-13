@@ -63,7 +63,7 @@ const Register = () => {
       .then((userCredential) => {
         console.log(userCredential.user);
 
-        navigate("/login"); // Redirect to the home page
+        navigate("/"); // Redirect to the home page
       })
       .catch((error) => {
         // Handle errors from Firebase registration

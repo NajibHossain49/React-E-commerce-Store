@@ -1,0 +1,112 @@
+[
+    {
+      "id": 101,
+      "name": "Wireless Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 79.99,
+      "brand": "SoundMax",
+      "stock": 150,
+      "description": "High-quality wireless Bluetooth headphones with noise cancellation and 30-hour battery life.",
+      "rating": 4.5,
+      "image_url": "https://hoco.com.bd/wp-content/uploads/2024/05/5-14.webp"
+    },
+    {
+      "id": 102,
+      "name": "Smartwatch Series 5",
+      "category": "Electronics",
+      "price": 199.99,
+      "brand": "FitTech",
+      "stock": 80,
+      "description": "A sleek smartwatch with heart rate monitor, GPS, and a built-in fitness tracker.",
+      "rating": 4.7,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 103,
+      "name": "Portable Power Bank 10,000mAh",
+      "category": "Accessories",
+      "price": 25.99,
+      "brand": "PowerPlus",
+      "stock": 200,
+      "description": "Compact portable power bank with fast-charging capability and LED indicators.",
+      "rating": 4.3,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 104,
+      "name": "Eco-Friendly Yoga Mat",
+      "category": "Sports & Outdoors",
+      "price": 34.99,
+      "brand": "GreenFit",
+      "stock": 50,
+      "description": "Non-slip yoga mat made from eco-friendly materials, perfect for home workouts.",
+      "rating": 4.8,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 105,
+      "name": "Bluetooth Smart Speaker",
+      "category": "Electronics",
+      "price": 59.99,
+      "brand": "SoundWave",
+      "stock": 120,
+      "description": "Portable Bluetooth speaker with rich sound and built-in voice assistant compatibility.",
+      "rating": 4.4,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 106,
+      "name": "Stainless Steel Insulated Tumbler",
+      "category": "Home & Kitchen",
+      "price": 19.99,
+      "brand": "ThermoPro",
+      "stock": 300,
+      "description": "Keeps drinks hot or cold for up to 12 hours, made from durable stainless steel.",
+      "rating": 4.6,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 107,
+      "name": "Aromatherapy Essential Oil Diffuser",
+      "category": "Home & Kitchen",
+      "price": 39.99,
+      "brand": "ScentEase",
+      "stock": 75,
+      "description": "Ultrasonic essential oil diffuser with color-changing LED lights and quiet operation.",
+      "rating": 4.7,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 108,
+      "name": "LED Desk Lamp with Wireless Charger",
+      "category": "Home & Kitchen",
+      "price": 49.99,
+      "brand": "LumiTech",
+      "stock": 60,
+      "description": "Adjustable LED desk lamp with a built-in wireless charging pad and touch control.",
+      "rating": 4.2,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 109,
+      "name": "Electric Wine Opener Set",
+      "category": "Kitchen",
+      "price": 24.99,
+      "brand": "VinoPro",
+      "stock": 180,
+      "description": "Electric wine opener with rechargeable battery and foil cutter for an effortless wine experience.",
+      "rating": 4.6,
+      "image_url": "/api/placeholder/400/400"
+    },
+    {
+      "id": 110,
+      "name": "4K Ultra HD Streaming Device",
+      "category": "Electronics",
+      "price": 99.99,
+      "brand": "StreamPro",
+      "stock": 110,
+      "description": "Stream your favorite content in stunning 4K resolution with this easy-to-use device.",
+      "rating": 4.5,
+      "image_url": "/api/placeholder/400/400"
+    }
+]
