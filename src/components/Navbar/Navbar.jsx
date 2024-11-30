@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <NavLink to="/login" className="flex-shrink-0">
+          <NavLink to="/" className="flex-shrink-0">
             <h1 className="text-xl font-bold text-gray-800">ReactShop</h1>
           </NavLink>
 

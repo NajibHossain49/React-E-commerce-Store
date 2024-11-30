@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
   // Access Context
   const { user, loading } = useContext(AuthContext);
-console.log(user,loading);
+// console.log(user,loading);
   if (loading) {
     return <span className="loading loading-ball loading-lg"></span>;
   }
